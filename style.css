@@ -1,28 +1,129 @@
+html {
+  height: 100%;
+}
+
 body {
-    padding: 20px;
+  height: 100%;
+  background: rgba(22, 160, 133, 0.8);
+  margin: 0;
+}
+
+#app {
+  width: 281px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  margin-top: 100px;
+  background: rgba(22, 160, 133, 0.8);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  background: white;
+  padding: 30px;
 }
 
 .main {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-top: 30px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
-    margin-bottom: 20px;
+  height: 36px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  border: none;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  opacity: 0.8;
+}
+.buttons button:focus {
+  outline: none;
+  border: none;
+}
+
+.btn-save {
+  background: #2ecc71;
+}
+
+.btn-clear {
+  background: #ff5555;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .items-list li {
-    margin-bottom: 10px;
+  background: #fff;
+  height: 40px;
+  color: #666;
+  line-height: 40px;
+  position: relative;
+  padding: 0 40px 0 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.btn-remove {
-    margin-left: 10px;
+.items-list li a {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  background: #2ecc71;
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.items-list li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+.items-list li:nth-child(2n) a {
+  opacity: 0.8;
+}
+
+.items-list li:hover a {
+  opacity: 0.5;
 }
